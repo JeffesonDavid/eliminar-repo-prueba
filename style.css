@@ -1,0 +1,353 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	/* margin-bottom: 20px; */
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+}
+
+:root {
+	--celesteClaro: #006677;
+	--succes1: #009944;
+	--succes2: #008833;
+	--blanco: #ffffff;
+	--grisOscuro: #1f1f1f;
+	--danger: #df1c44;
+}
+
+.contenedor {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	/* align-content: flex-start; */
+
+	margin: 20px 0;
+	padding: 4px;
+	min-width: 150px;
+}
+
+.products {
+	text-align: center;
+	margin: 10px 5px;
+	padding: 10px;
+
+	outline: 1px solid var(--celesteClaro);
+	border-radius: 10px;
+}
+.products:hover {
+	background-color: #00667722;
+}
+
+.products__contenedor {
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	justify-content: space-evenly;
+}
+
+.products__contenedor img {
+	width: 130px;
+	height: 150px;
+	object-fit: contain;
+	object-position: center;
+	margin-right: 15px;
+}
+
+.products__contenedor .description {
+	min-width: 130px;
+	max-width: 140px;
+}
+
+.products__contenedor .btnComprar {
+	position: absolute;
+	bottom: 5px;
+	right: 3px;
+	padding: 3px 5px;
+
+	border: solid 1px #009944;
+	border-radius: 5px;
+	background-color: transparent;
+	color: var(--grisOscuro);
+	cursor: pointer;
+}
+
+.products__contenedor .btnComprar:hover {
+	background-color: var(--succes1);
+	color: var(--blanco);
+	transition: 0.6s;
+}
+
+.products__contenedor .precio {
+	position: absolute;
+	bottom: 5px;
+	right: 80px;
+	padding: 3px 5px;
+}
+
+@media only screen and (max-width: 345px) {
+	body {
+		background-color: lightblue;
+	}
+	.products__contenedor {
+		padding-bottom: 50px;
+	}
+	.products__contenedor .description {
+		max-width: 225px;
+	}
+
+	.products__contenedor .btnComprar {
+		bottom: 5px;
+		right: 15%;
+	}
+
+	.products__contenedor .precio {
+		bottom: 5px;
+		right: 56%;
+	}
+}
+
+.mostrarCarrito {
+	/* outline: 1px solid var(--danger); */
+
+	min-width: 150px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	padding: 5px 2px;
+
+	border-top: 1px solid var(--grisOscuro);
+}
+
+.mostrarCarrito .addProducts {
+	color: var(--celesteClaro);
+}
+
+.mostrarCarrito .addProducts img {
+	width: 130px;
+	object-fit: cover;
+	align-content: center;
+}
+
+.mostrarCarrito .descripcionDelProducto {
+	flex-grow: 10;
+	width: 275px;
+	padding: 3px 5px;
+}
+
+.mostrarCarrito .btnsDinamicosModificadores {
+	width: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position: relative;
+}
+
+.mostrarCarrito .btnsDinamicosModificadores .btnDinamicoEliminar {
+	position: absolute;
+	top: 2px;
+
+	padding: 3px 5px;
+	border: solid 1px var(--danger);
+	border-radius: 5px;
+	background-color: transparent;
+	color: var(--grisOscuro);
+	cursor: pointer;
+	font-size: 16px;
+}
+
+.mostrarCarrito .btnsDinamicosModificadores .btnDinamicoEliminar:hover {
+	background-color: var(--danger);
+	color: var(--blanco);
+	transition: 0.6s;
+}
+
+.mostrarCarrito .btnsDinamicosModificadores .btnDinamicoAumentar {
+	border-radius: 40%;
+	outline: 1px solid #ccc;
+	padding: 1px 3px;
+	margin-left: 5px;
+	background-color: #ccc2;
+	color: var(--grisOscuro);
+	cursor: pointer;
+}
+
+.mostrarCarrito .btnsDinamicosModificadores .btnDinamicoDisminuir {
+	border-radius: 40%;
+	outline: 1px solid #ccc;
+	padding: 1px 5px;
+	margin-right: 5px;
+	background-color: #ccc2;
+	color: var(--grisOscuro);
+	cursor: pointer;
+}
+
+.mostrarCarrito .factura {
+	width: 150px;
+	flex-grow: 6;
+}
+
+@media only screen and (max-width: 510px) {
+	.mostrarCarrito .btnsDinamicosModificadores {
+		min-width: 150px;
+		padding: 10px 0;
+		flex-grow: 1;
+		/* margin: 0 auto; */
+	}
+
+	.mostrarCarrito .btnsDinamicosModificadores .btnDinamicoEliminar {
+		position: inherit;
+		margin-right: 30px;
+	}
+}
+
+.facturaPrincipal {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 0 auto;
+	width: 280px;
+	padding: 0 5px;
+	padding-bottom: 10px;
+
+	border: 2px solid var(--celesteClaro);
+}
+
+.factura__titulo {
+	min-width: 200px;
+	flex-grow: 1;
+	text-align: center;
+
+	font-family: 'Papyrus';
+	font-size: 2rem;
+}
+
+.precioSubtotal {
+	min-width: 200px;
+	flex-grow: 1;
+	position: relative;
+	margin-top: 10px;
+}
+
+.precioSubtotal span {
+	position: absolute;
+	right: 1px;
+}
+
+.precioIva {
+	min-width: 200px;
+	flex-grow: 1;
+	position: relative;
+	margin-top: 10px;
+}
+
+.precioIva span {
+	position: absolute;
+	right: 1px;
+}
+
+.precioFinal {
+	min-width: 200px;
+	flex-grow: 1;
+	position: relative;
+	margin-top: 10px;
+}
+
+.precioFinal span {
+	position: absolute;
+	right: 1px;
+}
+
+.finalizarCompra {
+	padding: 3px 5px;
+	margin-top: 10px;
+	border: solid 2px #009944;
+	background-color: #008833;
+	color: #eee;
+	cursor: pointer;
+}
+
+.container-accion {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 100;
+	display: none;
+	top: 0;
+	justify-content: center;
+	align-content: center;
+
+	background-color: #202020de;
+}
+
+.accionEliminar {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-content: center;
+	width: 500px;
+	height: 200px;
+	text-align: center;
+	margin: auto;
+	background-color: #004545;
+	padding: 0 7px;
+
+	outline: 1px solid var(--celesteClaro);
+}
+
+.leyenda {
+	min-width: 400px;
+	margin: 0 auto;
+	color: #fff;
+	font-size: 1.2rem;
+}
+.middle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.btn {
+	width: 200px;
+	color: white;
+	font-size: 14px;
+	font-family: 'montserrat';
+	margin: 30px 0 0 0;
+	border: 2px solid #8b9201;
+	padding: 14px 20px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	overflow: hidden;
+	transition: 1s all ease;
+	position: relative;
+	cursor: pointer;
+}
+.btn-primary::before,
+.btn-danger::before {
+	background: #335522cc;
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+	transition: all 0.6s ease;
+}
+
+.btn-primary::before,
+.btn-danger::before {
+	width: 0%;
+	height: 100%;
+}
+
+.btn-primary:hover::before,
+.btn-danger:hover::before {
+	width: 100%;
+}

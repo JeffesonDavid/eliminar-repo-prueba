@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>SUPERMARKET V2</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+	<article class="contenedor">
+		<article class="products">
+			<h5 class="title">Iphone 12 Pro Máx</h5>
+			<br />
+			<div class="products__contenedor">
+				<img src="https://celularess.com/wp-content/uploads/2020/12/Apple-iPhone-12-Pro-Max.png"
+					alt="Iphone 12 Pro Máx" />
+				<p class="description">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+					<a href="#">más detalles</a>
+				</p>
+				<p class="precio">$1200</p>
+				<button class="btnComprar" data-producto="Iphone 12 Pro Máx" data-marca="Iphone" data-precio="1200"
+					data-descripcion="Aquí va la descripcion del iphone 12"
+					data-img="https://celularess.com/wp-content/uploads/2020/12/Apple-iPhone-12-Pro-Max.png">
+					Agregar
+				</button>
+			</div>
+		</article>
+
+		<article class="products">
+			<h5 class="title">Xbox Series X</h5>
+			<br />
+			<div class="products__contenedor">
+				<img src="https://www.notebookcheck.org/fileadmin/Notebooks/News/_nc3/xbsx_top.png"
+					alt="Xbox Series X" />
+				<p class="description">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+					<a href="#">más detalles</a>
+				</p>
+				<p class="precio">$799.99</p>
+				<button class="btnComprar" data-producto="Xbox Series X" data-marca="Microsoft" data-precio="799.99"
+					data-descripcion="Aquí va descripcion de del Xbox Series"
+					data-img="https://www.notebookcheck.org/fileadmin/Notebooks/News/_nc3/xbsx_top.png">
+					Agregar
+				</button>
+			</div>
+		</article>
+
+		<article class="products">
+			<h5 class="title">Mando Ps5 Edición Cristal Grefg</h5>
+			<br />
+			<div class="products__contenedor">
+				<img src="https://xcontrollers.es/wp-content/uploads/2021/09/grefg-ps5-normal.png"
+					alt="Mando Ps5 Edición Cristal Grefg" />
+				<p class="description">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+					<a href="#">más detalles</a>
+				</p>
+				<p class="precio">$249.99</p>
+				<button class="btnComprar" data-producto="Mando Ps5 Edición Cristal Grefg" data-marca="Sony"
+					data-precio="249.99" data-descripcion="Aquí va la descripción del mando de Ps5"
+					data-img="https://xcontrollers.es/wp-content/uploads/2021/09/grefg-ps5-normal.png">
+					Agregar
+				</button>
+			</div>
+		</article>
+
+		<article class=" products">
+			<h5 class="title">PlayStation 5</h5>
+			<br />
+			<div class="products__contenedor">
+				<img id="imagenDePrueba" src="https://store.sony.com.pe/arquivos/menu-ps5.png?v=637305052158500000"
+					alt="PlayStation 5" />
+				<p class="description">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+					<a href="#">más detalles</a>
+				</p>
+				<p class="precio">$889.99</p>
+				<button class="btnComprar" data-producto="PlayStation 5" data-marca="Sony" data-precio="889.99"
+					data-descripcion="Aquí va la descripcion del PlayStation 5"
+					data-img="https://store.sony.com.pe/arquivos/menu-ps5.png?v=637305052158500000">
+					Agregar
+				</button>
+			</div>
+		</article>
+	</article>
+	<div class="container-accion">
+		<span class="accionEliminar middle">
+			<span class="leyenda">¿Está seguro que desea eliminar el producto del carrito?</span>
+			<label class="btn btn-danger">Confirmar</label>
+			<label class="btn btn-primary">Cancelar</label>
+		</span>
+	</div>
+
+	<!-- TODOS LOS TEMPLATES -->
+	<footer>
+		<template class="templateProductos">
+			<section class="mostrarCarrito">
+				<div class="addProducts">
+					<img class="imgDinamica" src="hola" alt="imagenDinamica" < />
+				</div>
+				<span class="descripcionDelProducto">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+					Placeat nisi adipisci atque accusantium doloremque ullam
+					itaque laborum obcaecati, reprehenderit, autem, sequi
+					quaerat dolorem deserunt voluptate culpa veniam ipsa
+					eligendi illum.</span>
+				<div class="btnsDinamicosModificadores">
+					<button class="btnDinamicoEliminar">Eliminar</button>
+					<span class="btnDinamicoDisminuir">-</span>
+					<span class="contador">01</span>
+					<span class="btnDinamicoAumentar">+</span>
+				</div>
+			</section>
+		</template>
+	</footer>
+
+	<aside class="factura">
+		<template class="templateFactura">
+			<aside class="facturaPrincipal">
+				<p class="factura__titulo">Factura</p>
+				<label class="precioSubtotal">Subtotal <span class="subtotal">$2515.33</span></label>
+				<label class="precioIva">iva 12% <span class="iva">$152</span></label>
+				<label class="precioFinal">Precio Final <span class="final">$1555</span></label>
+				<button type="submit" class="finalizarCompra">
+					Finalizar Compra
+				</button>
+			</aside>
+		</template>
+	</aside>
+	<script src="comprasApp.js"></script>
+</body>
+
+</html>
